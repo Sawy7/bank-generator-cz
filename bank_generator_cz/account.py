@@ -2,7 +2,7 @@
 
 from random import choice, randint, random
 
-from bank_codes import BANKS_CZ
+from bank_generator_cz.bank_codes import BANKS_CZ
 
 
 def get_part_checksum(number: int):
