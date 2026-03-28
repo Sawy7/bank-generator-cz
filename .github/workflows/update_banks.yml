@@ -24,6 +24,7 @@ jobs:
         run: uv sync --locked --all-extras --dev
 
       - name: Run script
+        id: script
         run: |
           output=$(uv run generate_bank_list.py)
           echo "message=$output" >> $GITHUB_OUTPUT
