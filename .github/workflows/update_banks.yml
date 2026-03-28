@@ -24,7 +24,9 @@ jobs:
         run: uv sync --locked --all-extras --dev
 
       - name: Run script
-        run: uv run generate_bank_list.py
+        run: |
+          output=$(uv run generate_bank_list.py)
+          echo "message=$output" >> $GITHUB_OUTPUT
 
       - name: Check for changes
         id: git-check
@@ -39,7 +41,7 @@ jobs:
         if: steps.git-check.outputs.changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "Update bank codes from ČNB list"
-          branch: automated/script-update
+          commit-message: ${{ steps.script.outputs.message }}
+          branch: automated/bank-codes-update
           delete-branch: true
-          title: "Automated bank codes update"
+          title: Automatic bank codes update

@@ -2,6 +2,8 @@
 
 import argparse
 import csv
+from datetime import date
+from email.utils import parsedate_to_datetime
 from importlib import resources
 
 import requests
@@ -29,6 +31,11 @@ def generate(url):
             bank_values = [f'"{col}"' for col in row]
             codes_file.write(f"    ({', '.join(bank_values)}),\n")
         codes_file.write(")\n")
+
+    print("Bank codes updated from ČNB file")
+    modified = parsedate_to_datetime(response.headers.get("Last-Modified"))
+    if modified:
+        print("\n\nCreated on", modified.strftime("%Y-%m-%d"), end="")
 
 
 if __name__ == "__main__":
