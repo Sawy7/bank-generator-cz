@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  run-script:
+  update-bank-codes:
     runs-on: ubuntu-latest
 
     steps:
