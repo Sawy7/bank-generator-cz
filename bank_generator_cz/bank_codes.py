@@ -5,7 +5,6 @@ Kód platebního styku, Poskytovatel platebních služeb, BIC kód (SWIFT), Syst
 """
 
 BANKS_CZ = (
-    ("9999", "Fake Bank", "MMM", "A"),
     ("0100", "Komerční banka, a.s.", "KOMBCZPP", "A"),
     ("0300", "Československá obchodní banka, a. s.", "CEKOCZPP", "A"),
     ("0600", "MONETA Money Bank, a.s.", "AGBACZPP", "A"),
