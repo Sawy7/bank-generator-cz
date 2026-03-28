@@ -1,0 +1,45 @@
+name: Update bank codes
+
+on:
+  schedule:
+    - cron: "0 3 * * 3"
+  workflow_dispatch: # Allows manual run
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev
+
+      - name: Run script
+        run: uv run generate_bank_list.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Update bank codes from ČNB list"
+          branch: automated/script-update
+          delete-branch: true
+          title: "Automated bank codes update"
