@@ -30,7 +30,7 @@ BANKS_CZ = (
     ("6200", "COMMERZBANK Aktiengesellschaft, pobočka Praha", "COBACZPX", "A"),
     ("6210", "mBank S.A., organizační složka", "BREXCZPP", "A"),
     ("6300", "BNP Paribas S.A., pobočka Česká republika", "GEBACZPP", "A"),
-    ("6363", "Partners Banka, a.s.", "", "A"),
+    ("6363", "Partners Banka, a.s.", "PTBNCZPP", "A"),
     ("6600", "Banking Circle S.A., Czech Republic", "", "-"),
     ("6700", "Všeobecná úverová banka a.s., pobočka Praha", "SUBACZPP", "A"),
     ("6800", "Sberbank CZ, a.s. v likvidaci", "VBOECZ2X", "A"),
