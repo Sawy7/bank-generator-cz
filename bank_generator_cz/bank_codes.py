@@ -17,7 +17,6 @@ BANKS_CZ = (
     ("2200", "Peněžní dům, spořitelní družstvo", "", "A"),
     ("2220", "Artesa, spořitelní družstvo", "ARTTCZPP", "A"),
     ("2250", "Banka CREDITAS a.s.", "CTASCZ22", "A"),
-    ("2260", "NEY spořitelní družstvo", "", "A"),
     ("2600", "Citibank Europe plc, organizační složka", "CITICZPX", "A "),
     ("2700", "UniCredit Bank Czech Republic and Slovakia, a.s.", "BACXCZPP", "A"),
     ("3030", "Air Bank a.s.", "AIRACZPP", "A"),
