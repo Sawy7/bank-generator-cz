@@ -43,7 +43,6 @@ BANKS_CZ = (
     ("8060", "Stavební spořitelna České spořitelny, a.s.", "", "A"),
     ("8090", "Česká exportní banka, a.s.", "CZEECZPP", "A"),
     ("8150", "HSBC Continental Europe, Czech Republic", "MIDLCZPP", "A"),
-    ("8190", "Sparkasse Oberlausitz-Niederschlesien", "", "A"),
     ("8198", "FAS finance company s.r.o.", "FFCSCZP1", "-"),
     ("8220", "Payment execution s.r.o.", "PAERCZP1", "-"),
     ("8250", "Bank of China (CEE) Ltd. Prague Branch", "BKCHCZPP", "A"),
