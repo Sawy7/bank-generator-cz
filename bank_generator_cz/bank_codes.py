@@ -50,5 +50,6 @@ BANKS_CZ = (
     ("8265", "Industrial and Commercial Bank of China Limited, Prague Branch, odštěpný závod", "ICBKCZPP", "A"),
     ("8500", "Multitude Bank p.l.c.", "", "A"),
     ("8610", "Devizová burza a.s.", "", "A"),
+    ("8620", "Comgate a.s.", "", "-"),
     ("8660", "PAYMONT, UAB", "", "A"),
 )
